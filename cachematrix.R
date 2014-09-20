@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Optimize inverse calculations with matrix
 
-## Write a short comment describing this function
+## Creates global variables x and m, creates functions for working with matrix 
 
 makeCacheMatrix <- function(x = matrix()) {
         set <- function(y) {
@@ -9,15 +8,15 @@ makeCacheMatrix <- function(x = matrix()) {
                 m <<- NULL
         }
         get <- function() x
-        setinverse <- function(solves) { m <<- solves }
-        getinverse <- function() { m }
+        setinverse <- function(solves)  m <<- solves 
+        getinverse <- function()  m 
         list(set = set, get = get,
              setinverse = setinverse,
              getinverse = getinverse)
 }
 
 
-## Write a short comment describing this function
+## If inverse matrix was calculated it takes her from cache else calc it
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
